@@ -32,7 +32,6 @@ public class SatteliteAgent : Agent {
 
             float action_z = act[0];
 
-            //if (Input.GetKey("a"))
             if (action_z < 0)
             {
                 player.force[2].enabled = true;
@@ -87,13 +86,6 @@ public class SatteliteAgent : Agent {
             if (actualDelta > prevDelta && act[0] < 0)
                 reward = -0.1f;
         }
-
-        //Debug.Log(reward);
-
-        //if (act[0] != 0f && (actualSpeed < prevSpeed || actualDelta < prevDelta))
-        //{
-        //    reward = 0.1f;
-        //}
 
         prevSpeed = actualSpeed;
         prevDelta = actualDelta;
